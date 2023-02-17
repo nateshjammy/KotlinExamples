@@ -2,7 +2,6 @@ package com.jlr.kotlinexamples
 
 import android.os.Bundle
 import android.util.Log
-import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 import kotlin.collections.ArrayList
@@ -94,7 +93,9 @@ class MainActivity : AppCompatActivity() {
 
         oddEvenNumberList()
 
-        findToSumofArray()
+        findSumofArray()
+
+        addNumberinArray()
 
        /* val numberList:ArrayList<Int> = ArrayList()
         for(i in 1..100){
@@ -120,8 +121,34 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    fun addNumberinArray(){
 
-    fun findToSumofArray(){
+        /*
+        *    Input: l1 = [2,4,3], l2 = [5,6,4]
+        *    Output: [7,0,8]
+        *    Explanation: 342 + 465 = 807.
+        *
+        * */
+
+
+        /*
+        *
+        *
+        *  logic     3 * 10  + 4 *10  + 2
+        * */
+
+        val numberL1 = arrayOf(2,4,3).reversedArray() // 3,4,2
+        val numberL2 = arrayOf(5,6,4).reversedArray() // 4,6,5
+
+        val sum  = (numberL1.get(0) * 10 + numberL1.get(1)) * 10 + numberL1.get(2)  +
+                (numberL2.get(0) * 10 + numberL2.get(1)) * 10 + numberL2.get(2)
+
+        Log.d("addNumberinArray is:","$sum")
+
+    }
+
+
+    fun findSumofArray(){
         /*
         *
         * Input: nums = [2,7,11,15], target = 9    Output: [0,1]
@@ -140,6 +167,7 @@ class MainActivity : AppCompatActivity() {
 
                     result.add(i)
                     result.add(j)
+
                 }
             }
         }
